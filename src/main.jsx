@@ -5,7 +5,7 @@ import App from "./App";
 import "./styles/MapPage.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/MapWorld">
+  <BrowserRouter basename="/mi-proyecto-frontbend/">
     <App />
   </BrowserRouter>
 );

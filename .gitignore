@@ -26,3 +26,4 @@ backbend/red-social-viajes2-firebase-adminsdk-fbsvc-35fd2ed4ae.json
 *.sw?
 src/auth/firebaseConfig.js
 src/services/firestoreService.js
+backbend/
