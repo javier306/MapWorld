@@ -1,3 +1,4 @@
+// src/components/CountryDrawer.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { auth, db } from "../auth/firebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -90,7 +91,7 @@ const CountryDrawer = ({ isOpen, onClose, countryName, readOnly = false, friendI
     const publicId = imageToDelete.public_id;
     console.log("Intentando borrar la imagen con public_id:", publicId);
     try {
-      await axios.post("http://localhost:3000/api/delete-image", { public_id: publicId });
+      await axios.post("https://backbend-server.onrender.com/api/delete-image", { public_id: publicId });
       const newImages = imageURLs.filter((_, i) => i !== index);
       const docRef = doc(db, "users", user.uid, "countries", countryName);
       await setDoc(docRef, { images: newImages }, { merge: true });

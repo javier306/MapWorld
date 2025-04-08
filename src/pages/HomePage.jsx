@@ -66,7 +66,7 @@ const HomePage = () => {
   const fetchFriendRequests = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/get-friend-requests?username=${username}`
+        `https://backbend-server.onrender.com/api/get-friend-requests?username=${username}`
       );
       console.log("Solicitudes recibidas:", response.data.requests);
       setFriendRequests(response.data.requests || []);
@@ -78,7 +78,7 @@ const HomePage = () => {
   const fetchFriends = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/get-friends?username=${username}`
+        `https://backbend-server.onrender.com/api/get-friends?username=${username}`
       );
       console.log("Amigos recibidos:", response.data.friends);
       const friendsData = response.data.friends || [];
@@ -104,10 +104,13 @@ const HomePage = () => {
 
   const handleSendRequest = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/send-friend-request", {
-        senderId: user.uid,
-        receiverUsername: usernameToSend,
-      });
+      const response = await axios.post(
+        "https://backbend-server.onrender.com/api/send-friend-request",
+        {
+          senderId: user.uid,
+          receiverUsername: usernameToSend,
+        }
+      );
       setSidebarMessage(response.data.message);
       console.log("Solicitud enviada:", response.data.message);
     } catch (error) {
@@ -118,10 +121,13 @@ const HomePage = () => {
 
   const handleAcceptRequest = async (senderUsername, requestId) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/handle-friend-request", {
-        requestId: requestId,
-        action: "accept",
-      });
+      const response = await axios.post(
+        "https://backbend-server.onrender.com/api/handle-friend-request",
+        {
+          requestId: requestId,
+          action: "accept",
+        }
+      );
       setSidebarMessage(response.data.message);
       console.log("Solicitud aceptada:", response.data.message);
       fetchFriendRequests();
@@ -134,10 +140,13 @@ const HomePage = () => {
 
   const handleRejectRequest = async (senderUsername, requestId) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/handle-friend-request", {
-        requestId: requestId,
-        action: "reject",
-      });
+      const response = await axios.post(
+        "https://backbend-server.onrender.com/api/handle-friend-request",
+        {
+          requestId: requestId,
+          action: "reject",
+        }
+      );
       setSidebarMessage(response.data.message);
       console.log("Solicitud rechazada:", response.data.message);
       fetchFriendRequests();

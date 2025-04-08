@@ -1,3 +1,4 @@
+// src/pages/FriendMapPage.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { useNavigate, useParams } from "react-router-dom";
