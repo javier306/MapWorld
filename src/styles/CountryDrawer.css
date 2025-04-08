@@ -1,0 +1,102 @@
+/* src/styles/CountryDrawer.css */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #f5f5f5;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+  }
+  
+  .drawer.open {
+    transform: translateX(0);
+  }
+  
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+  }
+  
+  .drawer-header h2 {
+    margin: 0;
+  }
+  
+  .drawer-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .drawer-content {
+    padding: 15px;
+    flex: 1;
+    color:#000000;
+    overflow-y: auto;
+  }
+  
+  .image-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .image-slot {
+    width: 80px;
+    height: 80px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .image-slot:hover {
+    border-color: #007bff;
+  }
+  
+  .empty-slot {
+    font-size: 2rem;
+    color: #ccc;
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .delete-button {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: rgba(255, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+  }
+  

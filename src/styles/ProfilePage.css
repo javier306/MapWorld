@@ -1,0 +1,139 @@
+/* src/styles/ProfilePage.css */
+.profile-page {
+    min-height: 100vh;
+    background: #f5faff; /* Fondo blanco azulado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .profile-header {
+    width: 100%;
+    padding: 20px;
+    background: #3a6073; /* Fondo azul oscuro */
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .profile-container {
+    width: 90%;
+    max-width: 800px;
+    background: #fff;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .profile-picture-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 4px solid #3a6073;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(58, 96, 115, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .profile-details {
+    flex-grow: 1;
+  }
+  
+  .profile-username {
+    font-size: 2rem;
+    margin: 0;
+    color: #3a6073;
+  }
+  
+  .friend-count {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Ranking de usuario y amigos */
+  .ranking-container {
+    margin-top: 20px;
+    background: #f5faff;
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+  }
+  
+  .ranking-container h3 {
+    margin-bottom: 10px;
+    color: #3a6073;
+  }
+  
+  .ranking-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ranking-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ranking-container ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .friend-name {
+    font-weight: bold;
+  }
+  
+  .visited-count {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .profile-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1.5rem;
+  }
+  

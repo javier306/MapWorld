@@ -1,0 +1,294 @@
+.home-page {
+  background: linear-gradient(135deg, #3a7bd5, #3a6073);
+  min-height: 100vh;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  margin: 20px auto 10px auto;
+  max-width: 80%;
+  position: relative;
+}
+
+/* Nuevo estilo para el contenedor de perfil */
+.profile-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Nuevo estilo para la imagen de perfil en círculo */
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  color: #3a6073;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.header-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ================= Sidebar Lateral ================== */
+.sidebar-toggle {
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #3a6073;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.sidebar-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Oculto por defecto */
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  color: #3a6073;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar-tabs button {
+  flex: 1;
+  padding: 12px;
+  background-color: #f4f4f4;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.sidebar-tabs button:hover,
+.sidebar-tabs button.active {
+  background-color: #e0e0e0;
+}
+
+.sidebar-content {
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.sidebar-content h3 {
+  margin-bottom: 10px;
+  color: #3a6073;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-content ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 5px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+/* Ajustes para que el nombre del amigo no quede oculto */
+.sidebar-content ul li span {
+  flex-grow: 1; /* El nombre del amigo ocupa el espacio disponible */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Evita que el texto sobresalga */
+  text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
+  min-width: 0; /* Soluciona problemas con el ajuste de flexbox */
+  margin-right: 10px; /* Espacio entre el nombre y el botón */
+}
+
+.sidebar-content ul li button {
+  flex-shrink: 0; /* Evita que el botón se expanda */
+  padding: 6px 12px;
+  white-space: nowrap; /* Asegura que el texto del botón no se corte */
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.sidebar-content ul li button:hover {
+  background: #0056b3;
+}
+
+.sidebar-content input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.sidebar-content button {
+  width: 100%;
+  padding: 8px;
+  background-color: #3a6073;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.sidebar-content button:hover {
+  background-color: #2d4f60;
+}
+
+/* Mensaje específico del sidebar */
+.sidebar-message {
+  font-size: 14px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* ================= Fin del Sidebar ================== */
+
+.home-content {
+  padding: 100px 20px 20px;
+  text-align: center;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: slideDownFade 1s ease-out;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: slideDownFade 1.2s ease-out;
+}
+
+.home-content button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #3a6073;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.home-content button:hover {
+  background: #e0e0e0;
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos del contenedor del mapa */
+.map-container {
+  margin-top: 40px;
+  height: 400px;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* Nuevo estilo para la foto de perfil de los amigos en el sidebar */
+.friend-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+/* Estilos para el ranking de amigos en la página de perfil */
+.ranking-container {
+  margin-top: 20px;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  color: #3a6073;
+}
+
+.ranking-container h3 {
+  margin-bottom: 10px;
+}
+
+.ranking-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ranking-container ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.ranking-container ul li:last-child {
+  border-bottom: none;
+}
+
+.friend-name {
+  font-weight: bold;
+}
+
+.visited-count {
+  font-size: 14px;
+}

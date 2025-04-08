@@ -1,0 +1,77 @@
+/* Asegura que en esta vista no se pueda hacer scroll */
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 15px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+}
+
+button {
+  padding: 12px;
+  font-size: 1.2rem;
+  background: white;
+  color: #1e3c72;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.success-message {
+  color: #00FF00;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.toggle-form {
+  color: #e0e0e0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.forgot-password {
+  color: #e0e0e0;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 10px 0;
+}

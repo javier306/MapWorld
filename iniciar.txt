@@ -1,0 +1,8 @@
+nodemon server.cjs 
+en la terminal de backbend
+
+npm run dev 
+en la terminal pricipal
+
+cloudinary  
+firebase
